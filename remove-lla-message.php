@@ -8,7 +8,7 @@
 
 */
 
-function remove_message($error){
+function wpella_remove_message($error){
     //check if that's the error you are looking for
     $pos = strpos($error, 'remaining.');
     if (is_int($pos)) {
@@ -18,6 +18,6 @@ function remove_message($error){
     return $error;
 	
 }
-add_filter('login_errors','remove_message');
+add_filter('login_errors','wpella_remove_message');
 
 ?>
